@@ -35,7 +35,6 @@ import {
   Provider as GeolocationProvider,
 } from '#/state/geolocation'
 import {Provider as HomeBadgeProvider} from '#/state/home-badge'
-import {Provider as InvitesStateProvider} from '#/state/invites'
 import {Provider as LightboxStateProvider} from '#/state/lightbox'
 import {MessagesProvider} from '#/state/messages'
 import {Provider as ModalStateProvider} from '#/state/modals'
@@ -46,7 +45,7 @@ import {Provider as ModerationOptsProvider} from '#/state/preferences/moderation
 import {Provider as UnreadNotifsProvider} from '#/state/queries/notifications/unread'
 import {
   Provider as SessionProvider,
-  SessionAccount,
+  type SessionAccount,
   useSession,
   useSessionApi,
 } from '#/state/session'
@@ -210,26 +209,24 @@ function App() {
             <PrefsStateProvider>
               <I18nProvider>
                 <ShellStateProvider>
-                  <InvitesStateProvider>
-                    <ModalStateProvider>
-                      <DialogStateProvider>
-                        <LightboxStateProvider>
-                          <PortalProvider>
-                            <BottomSheetProvider>
-                              <StarterPackProvider>
-                                <SafeAreaProvider
-                                  initialMetrics={initialWindowMetrics}>
-                                  <LightStatusBarProvider>
-                                    <InnerApp />
-                                  </LightStatusBarProvider>
-                                </SafeAreaProvider>
-                              </StarterPackProvider>
-                            </BottomSheetProvider>
-                          </PortalProvider>
-                        </LightboxStateProvider>
-                      </DialogStateProvider>
-                    </ModalStateProvider>
-                  </InvitesStateProvider>
+                  <ModalStateProvider>
+                    <DialogStateProvider>
+                      <LightboxStateProvider>
+                        <PortalProvider>
+                          <BottomSheetProvider>
+                            <StarterPackProvider>
+                              <SafeAreaProvider
+                                initialMetrics={initialWindowMetrics}>
+                                <LightStatusBarProvider>
+                                  <InnerApp />
+                                </LightStatusBarProvider>
+                              </SafeAreaProvider>
+                            </StarterPackProvider>
+                          </BottomSheetProvider>
+                        </PortalProvider>
+                      </LightboxStateProvider>
+                    </DialogStateProvider>
+                  </ModalStateProvider>
                 </ShellStateProvider>
               </I18nProvider>
             </PrefsStateProvider>
