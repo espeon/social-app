@@ -13,7 +13,6 @@ import * as CreateOrEditListModal from './CreateOrEditList'
 import * as DeleteAccountModal from './DeleteAccount'
 import * as EditProfileModal from './EditProfile'
 import * as InAppBrowserConsentModal from './InAppBrowserConsent'
-import * as InviteCodesModal from './InviteCodes'
 import * as ContentLanguagesSettingsModal from './lang-settings/ContentLanguagesSettings'
 import * as PostLanguagesSettingsModal from './lang-settings/PostLanguagesSettings'
 import * as LinkWarningModal from './LinkWarning'
@@ -63,9 +62,6 @@ export function ModalsContainer() {
   } else if (activeModal?.name === 'delete-account') {
     snapPoints = DeleteAccountModal.snapPoints
     element = <DeleteAccountModal.Component />
-  } else if (activeModal?.name === 'invite-codes') {
-    snapPoints = InviteCodesModal.snapPoints
-    element = <InviteCodesModal.Component />
   } else if (activeModal?.name === 'content-languages-settings') {
     snapPoints = ContentLanguagesSettingsModal.snapPoints
     element = <ContentLanguagesSettingsModal.Component />
