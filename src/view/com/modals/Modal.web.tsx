@@ -15,7 +15,6 @@ import * as EditProfileModal from './EditProfile'
 import * as InviteCodesModal from './InviteCodes'
 import * as ContentLanguagesSettingsModal from './lang-settings/ContentLanguagesSettings'
 import * as PostLanguagesSettingsModal from './lang-settings/PostLanguagesSettings'
-import * as LinkWarningModal from './LinkWarning'
 import * as UserAddRemoveLists from './UserAddRemoveLists'
 import * as VerifyEmailModal from './VerifyEmail'
 
@@ -80,8 +79,6 @@ function Modal({modal}: {modal: ModalIface}) {
     element = <ChangeEmailModal.Component />
   } else if (modal.name === 'change-password') {
     element = <ChangePasswordModal.Component />
-  } else if (modal.name === 'link-warning') {
-    element = <LinkWarningModal.Component {...modal} />
   } else {
     return null
   }
