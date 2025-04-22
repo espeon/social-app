@@ -8,7 +8,6 @@ import {useModalControls, useModals} from '#/state/modals'
 import {FullWindowOverlay} from '#/components/FullWindowOverlay'
 import {createCustomBackdrop} from '../util/BottomSheetCustomBackdrop'
 import * as ChangeEmailModal from './ChangeEmail'
-import * as ChangePasswordModal from './ChangePassword'
 import * as CreateOrEditListModal from './CreateOrEditList'
 import * as DeleteAccountModal from './DeleteAccount'
 import * as EditProfileModal from './EditProfile'
@@ -78,9 +77,6 @@ export function ModalsContainer() {
   } else if (activeModal?.name === 'change-email') {
     snapPoints = ChangeEmailModal.snapPoints
     element = <ChangeEmailModal.Component />
-  } else if (activeModal?.name === 'change-password') {
-    snapPoints = ChangePasswordModal.snapPoints
-    element = <ChangePasswordModal.Component />
   } else if (activeModal?.name === 'link-warning') {
     snapPoints = LinkWarningModal.snapPoints
     element = <LinkWarningModal.Component {...activeModal} />

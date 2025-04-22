@@ -65,10 +65,6 @@ export interface ChangeEmailModal {
   name: 'change-email'
 }
 
-export interface ChangePasswordModal {
-  name: 'change-password'
-}
-
 export interface LinkWarningModal {
   name: 'link-warning'
   text: string
@@ -86,7 +82,6 @@ export type Modal =
   | DeleteAccountModal
   | VerifyEmailModal
   | ChangeEmailModal
-  | ChangePasswordModal
 
   // Temp
   | EditProfileModal
